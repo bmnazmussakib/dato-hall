@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircleIcon } from '../icons/Icons';
+import { IoIosCheckmarkCircle } from 'react-icons/io';
 
 const WhyChooseUs = () => {
   return (
@@ -20,12 +21,15 @@ const WhyChooseUs = () => {
           />
         </div>
       </div>
-      <div className="absolute top-1/2 left-1/2 -translate-y-1/2 bg-[#57b33e] text-white p-12 shadow-2xl lg:-ml-48 max-w-[550px]">
+      <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 lg:translate-x-0 bg-[#57b33e] text-white md:p-12 p-8  shadow-2xl lg:-ml-48 md:max-w-[550px] w-4/5">
         <p className="font-semibold mb-2">| why choose us</p>
-        <h2 className="text-4xl font-bold mb-6">We are Building a Sustainable Future</h2>
+        <h2 className="md:text-4xl text-3xl font-bold md:mb-6 mb-4">We are Building a Sustainable Future</h2>
         <ul className="space-y-6">
           <li className="flex">
-            <CheckCircleIcon />
+            <div className="text-2xl mt-1">
+
+            <IoIosCheckmarkCircle />
+            </div>
             <div className="ml-4">
               <h3 className="font-bold text-lg">Robust Experience</h3>
               <p className="text-sm opacity-90">
@@ -34,7 +38,10 @@ const WhyChooseUs = () => {
             </div>
           </li>
           <li className="flex">
-            <CheckCircleIcon />
+            <div className="text-2xl mt-1">
+
+            <IoIosCheckmarkCircle />
+            </div>
             <div className="ml-4">
               <h3 className="font-bold text-lg">Best Energy Tariffs</h3>
               <p className="text-sm opacity-90">

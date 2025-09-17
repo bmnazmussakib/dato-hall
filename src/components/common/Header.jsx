@@ -44,7 +44,7 @@ const MainNav = () => {
   return (
     <div className="bg-white sticky top-0 z-50">
       <Container>
-        <div className="pt-10 flex justify-between items-center ">
+        <div className="flex justify-between items-center py-6">
           <div className="text-3xl font-bold text-lime-600">
             <span className="bg-lime-600 text-white px-2 rounded-md">Dato</span>Hall
           </div>
@@ -78,7 +78,7 @@ const MainNav = () => {
             </button>
           </div>
         </div>
-        <nav className="hidden lg:flex items-center space-x-6 text-black font-semibold py-10">
+        <nav className="hidden lg:flex items-center space-x-6 text-black font-semibold ">
           {navLinks.map(link => (
             <a
               key={link}
