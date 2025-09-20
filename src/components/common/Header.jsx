@@ -13,7 +13,7 @@ import {
 import Container from './Container';
 
 const TopBar = () => (
-  <div className="bg-lime-500 text-white text-sm">
+  <div className="bg-[#27ad4c] text-white text-sm">
     <Container>
       <div className="py-2 flex justify-between items-center">
         <div className="flex items-center space-x-4">
@@ -42,21 +42,21 @@ const MainNav = () => {
   const navLinks = ["Home", "Products", "Software", "Services", "Solutions", "Homeowner", "Support", "Company"];
 
   return (
-    <div className="bg-white sticky top-0 z-50">
+    <div className="bg-white sticky top-0 z-50 shadow-sm lg:shadow-none">
       <Container>
-        <div className="flex justify-between items-center py-6">
-          <div className="max-w-[150px]">
+        <div className="flex justify-between items-center md:py-6 py-3">
+          <div className="lg:w-[180px] md:w-[150px] w-[120px]">
             <img src="/assets/images/logo.svg" alt="" />
           </div>
 
-          <div className="relative w-5/10">
+          <div className="relative w-5/10 hidden sm:block">
             <input
               type="text"
               placeholder="Search"
-              className="border border-gray-400 py-1.5 px-3 w-full focus:outline-none focus:ring-1 focus:ring-lime-500"
+              className="border border-gray-400 py-1.5 px-3 w-full focus:outline-none focus:ring-1 focus:ring-[#27ad4c]"
             />
             <button
-              className="absolute right-0 top-0 h-full px-2 text-white bg-lime-500 "
+              className="absolute right-0 top-0 h-full px-2 text-white bg-[#27ad4c] "
               aria-label="Search"
             >
               <SearchIcon />
@@ -64,26 +64,27 @@ const MainNav = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-4 ">
-            <a href="#" className="font-medium text-slate-700 hover:text-lime-600">Login</a>
+            <a href="#" className="font-medium text-slate-700 hover:text-[#27ad4c]">Login</a>
             <a
               href="#"
-              className="bg-lime-500 text-white font-bold py-2 px-4 rounded-md hover:bg-lime-600 transition-colors"
+              className="bg-[#27ad4c] text-white font-bold py-2 px-4 rounded-md hover:bg-[#27ad4c] transition-colors"
             >
               Get a Free Quotation
             </a>
           </div>
           <div className="lg:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu" className='text-[#27ad4c]'>
               {isMenuOpen ? <XIcon /> : <MenuIcon />}
             </button>
           </div>
         </div>
+
         <nav className="hidden lg:flex items-center space-x-6 text-black font-semibold ">
           {navLinks.map(link => (
             <a
               key={link}
               href="#"
-              className={`pb-2 hover:text-lime-600 ${link === 'Home' ? 'text-lime-600 border-b-2 border-lime-600' : ''}`}
+              className={`pb-2 hover:text-[#27ad4c] ${link === 'Home' ? 'text-[#27ad4c] border-b-2 border-[#27ad4c]' : ''}`}
             >
               {link}
             </a>
@@ -92,21 +93,34 @@ const MainNav = () => {
       </Container>
       {isMenuOpen && (
         <div className="lg:hidden bg-white py-4 px-4 absolute w-full shadow-lg">
+          <div className="relative w-full sm:hidden mb-4">
+            <input
+              type="text"
+              placeholder="Search"
+              className="border border-gray-400 py-1.5 px-3 w-full focus:outline-none focus:ring-1 focus:ring-[#27ad4c]"
+            />
+            <button
+              className="absolute right-0 top-0 h-full px-2 text-white bg-[#27ad4c] "
+              aria-label="Search"
+            >
+              <SearchIcon />
+            </button>
+          </div>
           <nav className="flex flex-col space-y-4 text-slate-700 font-medium">
             {navLinks.map(link => (
               <a
                 key={link}
                 href="#"
-                className={`pb-2 hover:text-lime-600 ${link === 'Home' ? 'text-lime-600' : ''}`}
+                className={`pb-2 hover:text-[#27ad4c] ${link === 'Home' ? 'text-[#27ad4c]' : ''}`}
               >
                 {link}
               </a>
             ))}
             <div className="flex flex-col space-y-4 pt-4">
-              <a href="#" className="font-medium text-slate-700 hover:text-lime-600">Login</a>
+              <a href="#" className="font-medium text-slate-700 hover:text-[#27ad4c]">Login</a>
               <a
                 href="#"
-                className="bg-lime-500 text-white text-center font-bold py-2 px-4 rounded-md hover:bg-lime-600 transition-colors"
+                className="bg-[#27ad4c] text-white text-center font-bold py-2 px-4 rounded-md hover:bg-[#27ad4c] transition-colors"
               >
                 Get a Free Quotation
               </a>

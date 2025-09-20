@@ -9,8 +9,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-slate-900 text-slate-400">
-      <div className="container mx-auto px-4 pt-24 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div className="container mx-auto px-4 lg:py-24 md:py-16 py-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
           {/* Office Column 1 */}
           <div className="space-y-4">
             <h3 className="font-bold text-white text-lg">Office</h3>
@@ -56,7 +56,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-slate-700 pt-8 text-center text-sm">
+        <div className="border-t border-slate-700 lg:pt-8 pt-4 text-center text-sm">
           <p>DatoHall © 2025. All Rights Reserved.</p>
         </div>
       </div>

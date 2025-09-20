@@ -4,3 +4,19 @@
 body {
     font-family: "Inter", sans-serif;
 }
+
+.swiper .swiper-pagination  {
+    background-color: #ffffff;
+    width: fit-content !important;
+    bottom: -0px !important;
+    left: 50% !important;
+    transform: translateX(50%) !important;
+    padding: 5px 20px;
+    border-radius: 50px;
+    
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #27ad4c;;
+}
+
