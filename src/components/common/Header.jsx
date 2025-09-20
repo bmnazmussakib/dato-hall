@@ -45,8 +45,8 @@ const MainNav = () => {
     <div className="bg-white sticky top-0 z-50">
       <Container>
         <div className="flex justify-between items-center py-6">
-          <div className="text-3xl font-bold text-lime-600">
-            <span className="bg-lime-600 text-white px-2 rounded-md">Dato</span>Hall
+          <div className="max-w-[150px]">
+            <img src="/assets/images/logo.svg" alt="" />
           </div>
 
           <div className="relative w-5/10">

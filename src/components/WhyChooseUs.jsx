@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
         </div>
       </div>
       <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 lg:translate-x-0 bg-[#57b33e] text-white md:p-12 p-8  shadow-2xl lg:-ml-48 md:max-w-[550px] w-4/5">
-        <p className="font-semibold mb-2">| why choose us</p>
+        <p className="font-semibold mb-2 capitalize">why choose us</p>
         <h2 className="md:text-4xl text-3xl font-bold md:mb-6 mb-4">We are Building a Sustainable Future</h2>
         <ul className="space-y-6">
           <li className="flex">

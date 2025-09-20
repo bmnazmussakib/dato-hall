@@ -8,7 +8,7 @@ const ServiceCard = ({ number, title, subtitle, imageUrl }) => (
   >
     <div className="absolute inset-0 bg-black opacity-30 group-hover:bg-opacity-60 transition-all duration-300"></div>
     <div>
-      <img src={imageUrl} alt="" className='aspect-[16/18] object-cover overflow-hidden w-full h-auto' />
+      <img src={imageUrl} alt="" className='aspect-[3/2] object-cover overflow-hidden w-full h-auto' />
     </div>
     <div className="absolute top-0 z-10 p-12 flex flex-col justify-between text-white h-full">
       <p className="text-3xl font-semibold">{number}</p>
