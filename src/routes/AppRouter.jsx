@@ -6,6 +6,9 @@ import NotFound from "../pages/NotFound";
 import Portfolio from "../pages/Portfolio";
 import Services from "../pages/Services";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
+import Category from "../pages/Category";
+import ResellerPartner from "../pages/ResellerPartner";
+import ProductDetails from "../pages/ProductDetails";
 
 
 const AppRouter = () => {
@@ -17,6 +20,9 @@ const AppRouter = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/reseller-partner" element={<ResellerPartner />} />
+          <Route path="/product-details" element={<ProductDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>
