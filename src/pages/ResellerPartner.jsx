@@ -113,7 +113,7 @@ const ResellerPartner = () => {
 
     return (
         <div className="font-sans">
-            {/* <Header /> */}
+            <Header />
             <main>
                 <PartnerPortalBanner />
                 <FilterSection 

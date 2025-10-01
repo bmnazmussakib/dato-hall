@@ -6,16 +6,15 @@ import { products } from '../lib/constants'
 import HelpSection from '../components/HelpSection'
 
 const Category = () => {
+
+
+    console.log({ products })
     return (
         <>
-            <div className="font-sans text-gray-800">
-                <main className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <Breadcrumb />
-                    <ProductHero />
-                    <ProductGrid products={products} productsPerPage={12} />
-                </main>
-                <HelpSection />
-            </div>
+            <Breadcrumb />
+            <ProductHero />
+            <ProductGrid products={products} productsPerPage={12} />
+            <HelpSection />
         </>
     )
 }

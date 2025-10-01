@@ -55,22 +55,22 @@ export const galleryImages = [
 ];
 
 export const faqItems = [
-  { q: 'Can I trial Webflow before paying?', a: 'Yes, you can. We offer a free trial period for you to explore our features and see if Webflow is the right fit for your needs. No credit card required.' },
-  { q: 'What is a project?', a: 'A project is a complete website or application you build with Webflow. Each project has its own set of pages, assets, and settings.' },
-  { q: 'What can I white label?', a: 'With our premium plans, you can remove Webflow branding from your projects and use your own custom domain, giving you a fully white-labeled experience.' },
-  { q: 'How much traffic can the hosting handle?', a: 'Our hosting is built on a global CDN (Content Delivery Network) and is designed to handle high traffic volumes with fast loading speeds and reliable uptime.' },
-  { q: 'What kind of support does Webflow provide?', a: 'We offer comprehensive support through our help center, community forums, and email support for paid plans. Our team is ready to assist you with any questions.' },
-  { q: 'How long does it take to learn Webflow?', a: 'Learning time varies, but with our tutorials and intuitive interface, many users start building impressive websites within a few hours to a few days.' },
+    { q: 'Can I trial Webflow before paying?', a: 'Yes, you can. We offer a free trial period for you to explore our features and see if Webflow is the right fit for your needs. No credit card required.' },
+    { q: 'What is a project?', a: 'A project is a complete website or application you build with Webflow. Each project has its own set of pages, assets, and settings.' },
+    { q: 'What can I white label?', a: 'With our premium plans, you can remove Webflow branding from your projects and use your own custom domain, giving you a fully white-labeled experience.' },
+    { q: 'How much traffic can the hosting handle?', a: 'Our hosting is built on a global CDN (Content Delivery Network) and is designed to handle high traffic volumes with fast loading speeds and reliable uptime.' },
+    { q: 'What kind of support does Webflow provide?', a: 'We offer comprehensive support through our help center, community forums, and email support for paid plans. Our team is ready to assist you with any questions.' },
+    { q: 'How long does it take to learn Webflow?', a: 'Learning time varies, but with our tutorials and intuitive interface, many users start building impressive websites within a few hours to a few days.' },
 ];
 
 
 export const products = [
-  { id: '3', sku: 'AR3003', name: 'APC NetShelter SX, Server Rack Enclosure, 12U, Black, 658H x 600W x 900D mm', imageUrl: 'https://i.ibb.co/L5Sgqg8/ar3006-main.png'},
-  { id: '4', sku: 'AR3105', name: 'APC NetShelter SX, Server Rack Enclosure, 45U, Black, 2124H x 600W x 1070D mm', imageUrl: 'https://i.ibb.co/8mVRg1M/related2.png'},
-  { id: '8', sku: 'AR3300', name: 'APC NetShelter SX, Server Rack Enclosure, 42U, Black, 1991H x 600W x 1200D mm', imageUrl: 'https://i.ibb.co/8mVRg1M/related2.png'},
-  { id: '9', sku: 'AR3140', name: 'APC NetShelter SX, Networking Rack Enclosure, 42U, Black, 1991H x 750W x 1070D mm', imageUrl: 'https://i.ibb.co/L5Sgqg8/ar3006-main.png' },
-  { id: '5', sku: 'AR3350', name: 'APC NetShelter SX, Server Rack Enclosure, 42U, Black, 1991H x 750W x 1200D mm', imageUrl: 'https://i.ibb.co/8mVRg1M/related2.png' },
-  { id: '2', sku: 'AR3006', name: 'APC NetShelter SX, Server Rack Enclosure, 18U, Black, 925H x 600W x 900D mm', imageUrl: 'https://i.ibb.co/L5Sgqg8/ar3006-main.png' },
+    { id: '3', sku: 'AR3003', name: 'APC NetShelter SX, Server Rack Enclosure, 12U, Black, 658H x 600W x 900D mm', imageUrl: '/assets/images/server-rack.png' },
+    { id: '4', sku: 'AR3105', name: 'APC NetShelter SX, Server Rack Enclosure, 45U, Black, 2124H x 600W x 1070D mm', imageUrl: '/assets/images/server-rack.png' },
+    { id: '8', sku: 'AR3300', name: 'APC NetShelter SX, Server Rack Enclosure, 42U, Black, 1991H x 600W x 1200D mm', imageUrl: '/assets/images/server-rack.png' },
+    { id: '9', sku: 'AR3140', name: 'APC NetShelter SX, Networking Rack Enclosure, 42U, Black, 1991H x 750W x 1070D mm', imageUrl: '/assets/images/server-rack.png' },
+    { id: '5', sku: 'AR3350', name: 'APC NetShelter SX, Server Rack Enclosure, 42U, Black, 1991H x 750W x 1200D mm', imageUrl: '/assets/images/server-rack.png' },
+    { id: '2', sku: 'AR3006', name: 'APC NetShelter SX, Server Rack Enclosure, 18U, Black, 925H x 600W x 900D mm', imageUrl: '/assets/images/server-rack.png' },
 ];
 
 export const ApcLogo = () => (
@@ -127,7 +127,7 @@ export const PdfIcon = () => (
 
 export const CadIcon = () => (
     <svg className="w-6 h-6 text-gray-700 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
     </svg>
 );
 

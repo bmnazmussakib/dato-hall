@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from './common/Container';
 
 const ChevronRightIcon = () => (
   <svg
@@ -27,7 +28,9 @@ const Breadcrumb = () => {
   ];
 
   return (
-    <nav className="flex py-6" aria-label="Breadcrumb">
+    <>
+    <Container>
+      <nav className="flex py-6" aria-label="Breadcrumb">
       <ol role="list" className="flex items-center space-x-2 text-sm">
         {paths.map((path, index) => (
           <li key={path.name}>
@@ -50,6 +53,8 @@ const Breadcrumb = () => {
         ))}
       </ol>
     </nav>
+    </Container>
+    </>
   );
 };
 
