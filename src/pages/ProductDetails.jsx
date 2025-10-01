@@ -8,9 +8,15 @@ import {
     PdfIcon, 
     CadIcon,
     ChevronDownIcon,
+    mainProduct,
+    ApcLogo,
+    StarIcon,
+    CheckIcon,
+    LocationIcon,
+    ContactIcon,
 } from '../lib/constants';
 import Breadcrumb from '../components/Breadcrumb';
-import ProductHero from '../components/ProductHero';
+// import ProductHero from '../components/ProductHero';
 import HelpSection from '../components/HelpSection';
 import ProductCard from '../components/ProductCard';
 
@@ -54,6 +60,94 @@ const MainDocuments = () => (
         </div>
     </section>
 );
+
+const ProductHero = () => {
+  const [activeImage, setActiveImage] = useState(mainProduct.images[0]);
+
+  return (
+    <section className="py-8" aria-labelledby="product-heading">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        {/* Left Column - Image Gallery */}
+        <div className="flex flex-col items-center">
+          <div className="relative w-full aspect-square border border-gray-200 rounded-lg p-4 flex items-center justify-center">
+            <img
+              src={activeImage}
+              alt={mainProduct.name}
+              className="max-w-full max-h-full object-contain"
+            />
+            <div className="absolute bottom-2 right-2 flex items-center space-x-2 bg-white bg-opacity-80 px-2 py-1 rounded-full shadow-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-gray-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <span className="text-xs text-gray-600 font-medium">Roll over image to zoom in</span>
+            </div>
+          </div>
+
+          <div className="flex justify-center space-x-2 mt-4">
+            {mainProduct.images.map((img, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveImage(img)}
+                className={`w-20 h-20 border-2 p-1 rounded-md ${
+                  activeImage === img ? 'border-green-500' : 'border-gray-200'
+                } hover:border-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500`}
+              >
+                <img src={img} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-contain" />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Column - Product Details */}
+        <div>
+          <div className="mb-2">
+            <ApcLogo />
+          </div>
+          <h1 id="product-heading" className="text-3xl font-light text-gray-900 leading-tight">
+            {mainProduct.name}
+          </h1>
+          <p className="text-sm text-gray-500 mt-2">{mainProduct.sku}</p>
+
+          <div className="mt-6 border-t pt-6">
+            <button className="flex items-center text-sm font-semibold text-green-600 hover:text-green-800 transition-colors">
+              <StarIcon /> <span className="ml-2">Add to My Quotation</span>
+            </button>
+          </div>
+
+          <ul className="mt-6 space-y-3">
+            {mainProduct.features.map((feature, index) => (
+              <li key={index} className="flex items-start">
+                <CheckIcon />
+                <span className="ml-3 text-sm text-gray-600">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 space-y-4">
+            <a
+              href="#"
+              className="flex items-center text-sm font-semibold text-green-600 hover:text-green-800 hover:underline"
+            >
+              <LocationIcon /> <span className="ml-2">Find a reseller</span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center text-sm font-semibold text-green-600 hover:text-green-800 hover:underline"
+            >
+              <ContactIcon /> <span className="ml-2">Contact Sales</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Description = () => {
   const [isExpanded, setIsExpanded] = useState(false);

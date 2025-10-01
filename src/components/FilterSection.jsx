@@ -4,7 +4,7 @@ const FilterSection = ({ countries, selectedCountry, onCountryChange, onApply })
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-col sm:flex-row items-end gap-4">
-                <div className="w-full sm:w-64">
+                <div className="w-full">
                     <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-1">Country</label>
                     <div className="relative">
                         <select
@@ -12,7 +12,7 @@ const FilterSection = ({ countries, selectedCountry, onCountryChange, onApply })
                             name="country"
                             value={selectedCountry}
                             onChange={(e) => onCountryChange(e.target.value)}
-                            className="block w-full bg-gray-100 border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm appearance-none"
+                            className="text-black block w-full bg-gray-100 border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm appearance-none"
                         >
                             <option value="Any">- Any -</option>
                             {countries.map(country => (

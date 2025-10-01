@@ -97,7 +97,7 @@ const ResellerPartner = () => {
         }
         return allPartnersData.filter(partner => partner.country === selectedCountry);
     }, [selectedCountry]);
-    
+
     const totalPages = Math.ceil(filteredPartners.length / ITEMS_PER_PAGE);
 
     const paginatedPartners = useMemo(() => {
@@ -105,22 +105,51 @@ const ResellerPartner = () => {
         const endIndex = startIndex + ITEMS_PER_PAGE;
         return filteredPartners.slice(startIndex, endIndex);
     }, [currentPage, filteredPartners]);
-    
+
     const handleCountryChange = (country) => {
         setSelectedCountry(country);
         setCurrentPage(1); // Reset to first page on filter change
     };
 
+
+    const svgPattern = `
+    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0 40 L40 0 L40 40 Z" fill="#fff" opacity="0.05"/>
+            <path d="M0 0 L40 40 L0 40 Z" fill="#fff" opacity="0.05"/>
+        </g>
+    </svg>`;
+
+    const encodedSvg = `data:image/svg+xml;base64,${btoa(svgPattern)}`;
+
     return (
-        <div className="font-sans">
-            <Header />
+        <div className="">
+            <div
+                className="relative bg-cover bg-center h-48 md:h-64 flex items-center justify-center"
+                style={{ backgroundImage: `url('https://picsum.photos/seed/partners/1600/400')` }}
+            >
+                <div
+                    className="absolute inset-0 bg-[#2d3748]"
+                    style={{
+                        backgroundImage: `url('${encodedSvg}')`,
+                        backgroundRepeat: 'repeat',
+                        opacity: 0.9
+                    }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2d3748] via-transparent to-transparent opacity-50"></div>
+                <h1 className="relative text-white text-4xl md:text-5xl font-light z-10">
+                    Reseller Partners
+                </h1>
+            </div>
+
+            
             <main>
                 <PartnerPortalBanner />
-                <FilterSection 
+                <FilterSection
                     countries={countries}
                     selectedCountry={selectedCountry}
                     onCountryChange={handleCountryChange}
-                    onApply={() => {}} // Apply is implicit on change for this design
+                    onApply={() => { }} // Apply is implicit on change for this design
                 />
                 <PartnerList partners={paginatedPartners} />
                 {/* {totalPages > 1 && (
