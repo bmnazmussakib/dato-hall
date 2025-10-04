@@ -31,7 +31,7 @@ const Breadcrumb = () => {
     <>
     <Container>
       <nav className="flex py-6" aria-label="Breadcrumb">
-      <ol role="list" className="flex items-center space-x-2 text-sm">
+      <ol role="list" className="flex flex-wrap items-center space-x-2 text-sm">
         {paths.map((path, index) => (
           <li key={path.name}>
             <div className="flex items-center">

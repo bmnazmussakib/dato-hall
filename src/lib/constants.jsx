@@ -4,9 +4,9 @@ export const mainProduct = {
     name: 'APC NetShelter SX, Server Rack Enclosure, 18U, Black, 925H x 600W x 900D mm',
     sku: 'AR3006',
     images: [
-        'https://i.ibb.co/L5Sgqg8/ar3006-main.png',
-        'https://i.ibb.co/hH7s92s/ar3006-thumb1.png',
-        'https://i.ibb.co/8Yj0zW8/ar3006-thumb2.png',
+        '/assets/images/server-rack.png',
+        '/assets/images/server-rack.png',
+        '/assets/images/server-rack.png',
     ],
     features: [
         'Compact design fits tight spaces, ideal for small offices and remote deployments',
