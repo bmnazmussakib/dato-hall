@@ -19,7 +19,7 @@ const ProductCard = ({ product, view }) => {
         </div>
         <div className="ml-4 flex-shrink-0">
             <a
-                href="#"
+                href="/product-details"
                 className="inline-block border border-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
             >
                 View Details
@@ -46,7 +46,7 @@ const ProductCard = ({ product, view }) => {
         </h3>
       </div>
       <a
-        href="#"
+        href="/product-details"
         className="mt-6 w-full inline-block border border-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
       >
         View Details

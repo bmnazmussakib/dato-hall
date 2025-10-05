@@ -39,14 +39,26 @@ const TopBar = () => (
 
 const MainNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navLinks = ["Home", "Products", "Software", "Services", "Solutions", "Homeowner", "Support", "Company"];
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
+    { name: "Reseller", href: "/reseller-partner" },
+    { name: "Software", href: "/software" },
+    { name: "Services", href: "/services" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "Homeowner", href: "/homeowner" },
+    { name: "Support", href: "/support" },
+    { name: "Company", href: "/company" },
+  ];
 
   return (
     <div className="bg-white sticky top-0 z-50 shadow-sm lg:shadow-none">
       <Container>
         <div className="flex justify-between items-center md:py-6 py-3">
           <div className="lg:w-[180px] md:w-[150px] w-[120px]">
-            <img src="/assets/images/logo.svg" alt="" />
+            <a href="/">
+              <img src="/assets/images/logo.svg" alt="" />
+            </a>
           </div>
 
           <div className="relative w-5/10 hidden sm:block">
@@ -79,14 +91,15 @@ const MainNav = () => {
           </div>
         </div>
 
-        <nav className="hidden lg:flex items-center space-x-6 text-black font-semibold ">
+        <nav className="hidden lg:flex items-center space-x-6 text-black font-semibold">
           {navLinks.map(link => (
             <a
-              key={link}
-              href="#"
-              className={`pb-2 hover:text-[#27ad4c] ${link === 'Home' ? 'text-[#27ad4c] border-b-2 border-[#27ad4c]' : ''}`}
+              key={link.name}
+              href={link.href}
+              className={`pb-2 hover:text-[#27ad4c] ${link.name === "Home" ? "text-[#27ad4c] border-b-2 border-[#27ad4c]" : ""
+                }`}
             >
-              {link}
+              {link.name}
             </a>
           ))}
         </nav>
