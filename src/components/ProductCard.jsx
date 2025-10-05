@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import { ApcLogo } from '../constants';
 
 const ProductCard = ({ product, view }) => {
@@ -18,12 +19,12 @@ const ProductCard = ({ product, view }) => {
           </h3>
         </div>
         <div className="ml-4 flex-shrink-0">
-            <a
-                href="/product-details"
+            <Link
+                to="/product-details"
                 className="inline-block border border-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
             >
                 View Details
-            </a>
+            </Link>
         </div>
       </div>
     );
@@ -45,12 +46,12 @@ const ProductCard = ({ product, view }) => {
           {product.name}
         </h3>
       </div>
-      <a
-        href="/product-details"
+      <Link
+        to="/product-details"
         className="mt-6 w-full inline-block border border-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-md hover:bg-gray-100 transition-colors"
       >
         View Details
-      </a>
+      </Link>
     </div>
   );
 };

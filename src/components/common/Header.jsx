@@ -11,6 +11,7 @@ import {
   XIcon
 } from '../../icons/Icons';
 import Container from './Container';
+import { Link } from 'react-router-dom';
 
 const TopBar = () => (
   <div className="bg-[#27ad4c] text-white text-sm">
@@ -93,14 +94,14 @@ const MainNav = () => {
 
         <nav className="hidden lg:flex items-center space-x-6 text-black font-semibold">
           {navLinks.map(link => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className={`pb-2 hover:text-[#27ad4c] ${link.name === "Home" ? "text-[#27ad4c] border-b-2 border-[#27ad4c]" : ""
                 }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
       </Container>
